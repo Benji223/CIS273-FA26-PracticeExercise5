@@ -43,8 +43,8 @@ public class BinarySearchTree<T> : IBinarySearchTree<T>
     {
         if (key == parent.Key)
         {
-            // Update the value
             parent.Value = value;
+            return;
         }
         
         if (key < parent.Key)
@@ -305,7 +305,7 @@ public class BinarySearchTree<T> : IBinarySearchTree<T>
             {
                 return keys[middle];
             }
-            return (keys[middle - 1] + keys[middle]) / 2.0;
+            return keys[middle - 1] / 2.0 + keys[middle] / 2.0;
         }
     }
     
